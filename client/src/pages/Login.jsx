@@ -39,6 +39,7 @@ const Login = () => {
           response.data.dateCreated
         );
         setActivities(response.data.activities);
+        setShowPassword(false);
 
         //redirect to dashboard
         navigate("/dashboard");
