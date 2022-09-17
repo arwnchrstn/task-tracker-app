@@ -1,6 +1,6 @@
-### Task Tracker using MERN Stack
+# Task Tracker using MERN Stack
 
-# Features:
+### Features:
 
 - Login
 - Signup
