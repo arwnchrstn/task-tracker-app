@@ -1,0 +1,35 @@
+.btn-theme {
+  border: none !important;
+  background-color: $theme-color !important;
+
+  &:hover {
+    background-color: $theme-color-hover !important;
+  }
+}
+
+.btn-accent {
+  border: none !important;
+  background-color: $accent-color !important;
+
+  &:hover {
+    background-color: $accent-color-hover !important;
+  }
+}
+
+.btn-primary {
+  border: none !important;
+  background-color: $primary-color !important;
+
+  &:hover {
+    background-color: $primary-color-hover !important;
+  }
+}
+
+.btn-secondary {
+  border: none !important;
+  background-color: $secondary-color !important;
+
+  &:hover {
+    background-color: $secondary-color-hover !important;
+  }
+}

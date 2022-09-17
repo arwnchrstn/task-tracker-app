@@ -1,0 +1,9 @@
+@import "./scss/variables.scss";
+@import "./scss/base.scss";
+@import "./scss/modules/modules.scss";
+@import "./scss/layout/layout.scss";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  font-family: "Lato", sans-serif;
+}
