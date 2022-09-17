@@ -1,0 +1,73 @@
+.text-theme {
+  color: $theme-color !important;
+}
+.text-accent-theme {
+  color: $accent-color !important;
+}
+.text-primary-theme {
+  color: $primary-color !important;
+}
+.text-secondary-theme {
+  color: $secondary-color !important;
+}
+
+.bg-theme {
+  background-color: $theme-color !important;
+}
+.bg-accent-theme {
+  background-color: $accent-color !important;
+}
+.bg-primary-theme {
+  background-color: $primary-color !important;
+}
+.bg-secondary-theme {
+  background-color: $secondary-color !important;
+}
+
+.disable-body-scroll {
+  overflow: hidden;
+}
+
+input {
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+.form-control,
+.form-select,
+.btn {
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+a {
+  &:hover {
+    color: $theme-color-hover !important;
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #5db7de #07020d;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #07020d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5db7de;
+  border-radius: 0px;
+  border: 3px none #ffffff;
+}

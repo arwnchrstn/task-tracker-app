@@ -1,0 +1,49 @@
+.main-layout {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.portal-layout {
+  height: 100vh;
+  overflow: hidden;
+
+  .toggle-sidebar {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.content-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navbar-top {
+  min-height: 100%;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .portal-layout {
+    height: auto;
+  }
+
+  .content-container {
+    max-height: max-content;
+    margin-top: 60px;
+  }
+
+  .navbar-top {
+    min-height: max-content;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
