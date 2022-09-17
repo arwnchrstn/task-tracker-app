@@ -30,3 +30,7 @@
 ### Profile page
 ![image](https://user-images.githubusercontent.com/101480695/190859879-ee1e141f-fb6e-4f76-8aae-3f2c9ee181a1.png)
 
+### Email samples (Verify email, Reset password, Email verified)
+![image](https://user-images.githubusercontent.com/101480695/190860115-9eee831d-6ae1-48d1-a849-49c3b074a2eb.png)
+![image](https://user-images.githubusercontent.com/101480695/190860129-66fb629f-7960-432d-917b-ecb5e4f54e3b.png)
+![image](https://user-images.githubusercontent.com/101480695/190860150-e5109955-9370-4210-b3de-4d4ea90aee24.png)
