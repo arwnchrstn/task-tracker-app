@@ -52,6 +52,7 @@ const ResetPassword = () => {
 
       if (response.status === 200) {
         setSuccessChange(true);
+        setShowPassword(false);
       }
     } catch (error) {
       errorToast(error.response.data || error.message);

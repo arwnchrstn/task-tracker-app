@@ -402,7 +402,10 @@ const Profile = () => {
       {/* Modal for changing password */}
       <Modal
         show={showChangePassword}
-        onHide={() => setShowChangePassword(false)}
+        onHide={() => {
+          setShowChangePassword(false);
+          setShowPassword(false);
+        }}
       >
         <Modal.Body>
           <Formik
