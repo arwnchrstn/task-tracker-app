@@ -12,6 +12,7 @@
 - Mailing functionality (For sending verification and confirmation via email)
 - Delete account
 - JWT authentication
+- Installable (PWA)
 
 
 # Sample screenshots
