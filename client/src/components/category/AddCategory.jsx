@@ -180,9 +180,13 @@ const AddCategory = ({
                     {props.touched.dueDate && props.errors.dueDate}
                   </div>
 
+                  <label htmlFor="task-time" className="fw-bold ms-1 mt-2">
+                    Time
+                  </label>
                   <Field
                     type="time"
                     name="time"
+                    id="task-time"
                     className={`form-control mt-1 ${
                       props.touched.time && props.errors.time
                         ? "is-invalid"
