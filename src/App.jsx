@@ -10,19 +10,17 @@ import PlainLayout from "./layout/PlainLayout";
 import PortalLayout from "./layout/PortalLayout";
 import { layout, plainLayout, portalRoutes } from "./routes/routes";
 import { setSupported, setPrompt } from "./redux/features/supportPwaSlice";
+import loaderImage from "./assets/loader.webm";
 
 const loader = (
   <div
-    className="position-fixed w-100 h-100 d-flex justify-content-center align-items-center bg-light"
+    className="position-fixed w-100 h-100 d-flex flex-column justify-content-center align-items-center bg-light"
     style={{ zIndex: 9999 }}
   >
-    <div
-      className="spinner-grow text-theme"
-      style={{ width: "6rem", height: "6rem" }}
-      role="status"
-    >
-      <span className="visually-hidden">Loading...</span>
-    </div>
+    <video autoplay loop muted playsinline>
+      <source src={loaderImage} type="video/webm" />
+    </video>
+    <h2 className="text-accent fw-bold mt-3">Please wait...</h2>
   </div>
 );
 
