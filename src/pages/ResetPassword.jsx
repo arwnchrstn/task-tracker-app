@@ -197,7 +197,7 @@ const ResetPassword = () => {
                         maxWidth: "250px"
                       }}
                     />
-                    <h4 className="fw-bold text-theme mt-5">
+                    <h4 className="fw-bold text-theme mt-5 text-center">
                       This reset password link is invalid or already used
                     </h4>
 
