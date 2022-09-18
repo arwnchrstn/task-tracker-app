@@ -4,14 +4,25 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
 import useLoadUser from "../hooks/useLoadUser";
+import loaderImage from "../assets/loader.webm";
 
 const PortalLayout = () => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
-
+  const loader = (
+    <div
+      className="position-fixed w-100 h-100 d-flex flex-column justify-content-center align-items-center bg-light"
+      style={{ zIndex: 9999 }}
+    >
+      <video autoplay loop muted playsinline>
+        <source src={loaderImage} type="video/webm" />
+      </video>
+      <h2 className="text-accent fw-bold mt-3">Please wait...</h2>
+    </div>
+  );
   const loadUser = useLoadUser();
 
   //wait before user to be loaded from the server before rendering
-  if (loadUser) return;
+  if (loadUser) return loader;
 
   return (
     <>

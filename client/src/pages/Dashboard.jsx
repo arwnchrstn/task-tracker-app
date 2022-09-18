@@ -67,13 +67,13 @@ const Dashboard = () => {
               <h5 className="text-accent fw-bold">
                 <MdCategory size={25} className="pb-1" /> Total Categories
               </h5>
-              <h4 className="text-accent fw-bold mt-3">
+              <h5 className="text-accent fw-bold mt-3">
                 {!taskState.categories ? (
                   <Spinner animation="border" />
                 ) : (
                   taskState.totalCount?.categories
                 )}
-              </h4>
+              </h5>
             </div>
           </div>
 
@@ -82,13 +82,13 @@ const Dashboard = () => {
               <h5 className="text-accent fw-bold">
                 <FaTasks size={25} className="pb-1" /> Total Tasks
               </h5>
-              <h4 className="text-accent fw-bold mt-3">
+              <h5 className="text-accent fw-bold mt-3">
                 {!taskState.categories ? (
                   <Spinner animation="border" />
                 ) : (
                   taskState.totalCount?.tasks
                 )}
-              </h4>
+              </h5>
             </div>
           </div>
 
@@ -97,13 +97,13 @@ const Dashboard = () => {
               <h5 className="text-theme fw-bold">
                 <MdPendingActions size={25} className="pb-1" /> On Going
               </h5>
-              <h4 className="text-accent fw-bold mt-3">
+              <h5 className="text-accent fw-bold mt-3">
                 {!taskState.categories ? (
                   <Spinner animation="border" />
                 ) : (
                   taskState.totalCount?.ongoing
                 )}
-              </h4>
+              </h5>
             </div>
           </div>
 
@@ -112,13 +112,13 @@ const Dashboard = () => {
               <h5 className="text-success fw-bold">
                 <AiOutlineFileDone size={25} className="pb-1" /> Completed
               </h5>
-              <h4 className="text-accent fw-bold mt-3">
+              <h5 className="text-accent fw-bold mt-3">
                 {!taskState.categories ? (
                   <Spinner animation="border" />
                 ) : (
                   taskState.totalCount?.completed
                 )}
-              </h4>
+              </h5>
             </div>
           </div>
         </div>
