@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
 import useLoadUser from "../hooks/useLoadUser";
-import loaderImage from "../assets/loader.webm";
+import loaderImage from "../assets/loader.gif";
 
 const PortalLayout = () => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -13,9 +13,7 @@ const PortalLayout = () => {
       className="position-fixed w-100 h-100 d-flex flex-column justify-content-center align-items-center bg-light"
       style={{ zIndex: 9999 }}
     >
-      <video autoplay loop muted playsinline>
-        <source src={loaderImage} type="video/webm" />
-      </video>
+      <img src={loaderImage} alt="loader-hourglass" />
       <h2 className="text-accent fw-bold mt-3">Please wait...</h2>
     </div>
   );
