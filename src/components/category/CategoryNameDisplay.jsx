@@ -68,7 +68,7 @@ const CategoryNameDisplay = ({ selectedCategory, id }) => {
       <div className="mb-5">
         {!editCategoryName && (
           <>
-            <h3 className="text-theme fw-bold text-capitalize m-0">
+            <h3 className="text-theme fw-bold m-0">
               {selectedCategory?.name}{" "}
             </h3>
 

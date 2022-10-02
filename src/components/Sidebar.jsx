@@ -159,13 +159,13 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
           </p>
 
           {pwa.isSupported === true && (
-            <button
-              className="btn btn-outline-light px-4 btn-sm d-block mx-auto mb-3"
+            <ButtonSecondary
+              property="btn-sm form-control fw-bold text-accent b-block mb-3 mx-auto px-4"
               onClick={handleInstall}
               onFocus={(e) => e.target.blur()}
             >
               Install App
-            </button>
+            </ButtonSecondary>
           )}
 
           {!userState?.isVerified && (
@@ -222,7 +222,7 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
                     to={`/category/${task._id}`}
                     key={task._id}
                     onClick={() => setIsSidebarActive(!isSidebarActive)}
-                    className="px-3 mb-1 rounded d-block navlink text-secondary-theme text-decoration-none text-capitalize"
+                    className="px-3 mb-1 rounded d-block navlink text-secondary-theme text-decoration-none"
                   >
                     <motion.p variants={childVariant} className="mb-1">
                       &#9679; {task.name}

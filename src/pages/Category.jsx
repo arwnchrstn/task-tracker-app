@@ -20,10 +20,7 @@ const Category = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>{`TakaTask | ${selectedCategory?.name
-            .split(" ")
-            .map((word) => word[0].toUpperCase() + word.substr(1).toLowerCase())
-            .join(" ")}`}</title>
+          <title>{`TakaTask | ${selectedCategory?.name}`}</title>
         </Helmet>
       </HelmetProvider>
 
