@@ -11,7 +11,6 @@ const taskSchema = new mongoose.Schema({
         type: String,
         required: [true, "Category name is required"],
         trim: true,
-        min: [5, "Minimum of at least 5 characters"],
         max: [50, "Maximum of 50 characters"]
       },
       tasks: [
