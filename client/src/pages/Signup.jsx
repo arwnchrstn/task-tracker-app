@@ -20,7 +20,9 @@ const Signup = () => {
   const onSubmit = async (values, action) => {
     try {
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/users/signup",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/signup",
         values
       );
 

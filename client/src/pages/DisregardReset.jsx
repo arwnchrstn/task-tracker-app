@@ -22,7 +22,7 @@ const DisregardReset = () => {
     try {
       const response = await axios.delete(
         process.env.REACT_APP_API_SERVER +
-          `/api/users/forgot-password/remove/${resetToken}`
+          `${process.env.REACT_APP_USER_ENDPOINT}/forgot-password/remove/${resetToken}`
       );
 
       if (response.status === 200) {

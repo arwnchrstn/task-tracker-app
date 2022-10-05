@@ -34,7 +34,7 @@ const TasksList = ({ selectedCategory, id }) => {
       fieldset.disabled = true;
       const response = await axios.put(
         process.env.REACT_APP_API_SERVER +
-          `/api/categories/${id}/update-status`,
+          `${process.env.REACT_APP_CATEGORY_ENDPOINT}/${id}/update-status`,
         { taskid: e.currentTarget.dataset.taskid }
       );
 
@@ -70,7 +70,7 @@ const TasksList = ({ selectedCategory, id }) => {
       fieldset.disabled = true;
       const response = await axios.delete(
         process.env.REACT_APP_API_SERVER +
-          `/api/categories/${id}/delete-task/${e.currentTarget.dataset.taskid}`
+          `${process.env.REACT_APP_CATEGORY_ENDPOINT}/${id}/delete-task/${e.currentTarget.dataset.taskid}`
       );
 
       if (response.status === 200) {

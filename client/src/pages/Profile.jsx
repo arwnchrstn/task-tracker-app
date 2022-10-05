@@ -38,7 +38,9 @@ const Profile = () => {
     setIsResending(true);
     try {
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/verify/resend/verification",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_VERIFY_ENDPOINT +
+          "/resend/verification",
         { email: profile?.email }
       );
 
@@ -87,7 +89,9 @@ const Profile = () => {
 
     try {
       const response = await axios.put(
-        process.env.REACT_APP_API_SERVER + "/api/users/edit-username",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/edit-username",
         values
       );
 
@@ -127,7 +131,9 @@ const Profile = () => {
 
     try {
       const response = await axios.put(
-        process.env.REACT_APP_API_SERVER + "/api/users/change-email",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/change-email",
         values
       );
 
@@ -162,7 +168,9 @@ const Profile = () => {
   const changePassword = async (values, action) => {
     try {
       const response = await axios.put(
-        process.env.REACT_APP_API_SERVER + "/api/users/change-password",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/change-password",
         {
           newPassword: values.newPassword,
           currentPassword: values.currentPassword
@@ -194,7 +202,9 @@ const Profile = () => {
   const deleteAccount = async (values, action) => {
     try {
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/users/delete",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/delete",
         { confirmPassword: values.confirmPassword }
       );
 

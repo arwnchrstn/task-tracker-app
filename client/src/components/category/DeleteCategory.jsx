@@ -23,7 +23,8 @@ const DeleteCategory = ({ showDeleteTask, setShowDeleteTask }) => {
     setIsDeleteSubmitting(true);
     try {
       const response = await axios.delete(
-        process.env.REACT_APP_API_SERVER + `/api/categories/${id}/delete`
+        process.env.REACT_APP_API_SERVER +
+          `${process.env.REACT_APP_CATEGORY_ENDPOINT}/${id}/delete`
       );
 
       if (response.status === 200) {

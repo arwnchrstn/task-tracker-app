@@ -23,7 +23,9 @@ const Login = () => {
     try {
       const loginData = values;
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/users/login",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/login",
         loginData
       );
 

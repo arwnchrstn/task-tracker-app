@@ -20,7 +20,9 @@ const useLoadUser = () => {
     try {
       setIsUserLoading(true);
       const response = await axios.get(
-        process.env.REACT_APP_API_SERVER + "/api/users/check_user"
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/check_user"
       );
 
       if (response.status === 200) {

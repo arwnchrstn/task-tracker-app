@@ -20,7 +20,9 @@ const Verify = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/verify/" + token
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_VERIFY_ENDPOINT +
+          token
       );
 
       if (response.status === 200) {

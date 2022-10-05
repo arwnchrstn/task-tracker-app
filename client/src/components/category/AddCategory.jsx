@@ -42,7 +42,8 @@ const AddCategory = ({
         return errorToast("Invalid due date. Due date cannot be in the past");
 
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + `/api/categories/${id}/addtask`,
+        process.env.REACT_APP_API_SERVER +
+          `${process.env.REACT_APP_CATEGORY_ENDPOINT}/${id}/addtask`,
         formData
       );
 
