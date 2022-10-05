@@ -35,7 +35,8 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
   getCategories.current = async () => {
     try {
       const response = await axios.get(
-        process.env.REACT_APP_API_SERVER + "/api/categories"
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_CATEGORY_ENDPOINT
       );
 
       if (response.status === 200) {
@@ -57,7 +58,9 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
 
     try {
       const response = await axios.get(
-        process.env.REACT_APP_API_SERVER + "/api/users/logout"
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_USER_ENDPOINT +
+          "/logout"
       );
 
       if (response.status === 200) {
@@ -86,7 +89,9 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
     try {
       setIsDismissable(false);
       const response = await axios.post(
-        process.env.REACT_APP_API_SERVER + "/api/categories/add",
+        process.env.REACT_APP_API_SERVER +
+          process.env.REACT_APP_CATEGORY_ENDPOINT +
+          "/add",
         values
       );
 

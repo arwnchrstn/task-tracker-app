@@ -35,7 +35,8 @@ const CategoryNameDisplay = ({ selectedCategory, id }) => {
 
     try {
       const response = await axios.put(
-        process.env.REACT_APP_API_SERVER + `/api/categories/${id}/edit`,
+        process.env.REACT_APP_API_SERVER +
+          `${process.env.REACT_APP_CATEGORY_ENDPOINT}/${id}/edit`,
         { name: values.name }
       );
 

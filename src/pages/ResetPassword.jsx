@@ -27,7 +27,7 @@ const ResetPassword = () => {
     try {
       const response = await axios.get(
         process.env.REACT_APP_API_SERVER +
-          `/api/users/forgot-password/validate/${resetToken}`
+          `${process.env.REACT_APP_USER_ENDPOINT}/forgot-password/validate/${resetToken}`
       );
 
       if (response.status === 200) {
@@ -46,7 +46,7 @@ const ResetPassword = () => {
     try {
       const response = await axios.put(
         process.env.REACT_APP_API_SERVER +
-          `/api/users/forgot-password/update/${resetToken}`,
+          `${process.env.REACT_APP_USER_ENDPOINT}/forgot-password/update/${resetToken}`,
         { newPassword: values.newPassword }
       );
 
