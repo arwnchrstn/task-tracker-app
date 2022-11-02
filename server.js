@@ -16,6 +16,9 @@ const mongoConnect = require("./connection/mongo_connection");
 //mongoDB connection
 mongoConnect();
 
+//disable header for more security
+app.disable("x-powered-by");
+
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
